@@ -967,7 +967,7 @@ class tqdm(Comparable):
             maxinterval = 0
 
         if ascii is None:
-            ascii = not _supports_unicode(file)
+            ascii = True
 
         if bar_format and not ((ascii is True) or _is_ascii(ascii)):
             # Convert bar format into unicode since terminal uses unicode
